@@ -27,9 +27,14 @@ html {
 body {
     margin: 0;
     background-color: blanchedalmond;
+    min-height: 100vh;
 }
 
-
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 /* -------------------- NAVIGATION -------------------- */
 
 .flex-design {
@@ -48,7 +53,15 @@ body {
     border-color: rgb(141, 91, 4);
 }
 
-
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 98%;
+    max-width: 1200px;
+    z-index: 1000;
+}
 /* -------------------- HEADER -------------------- */
 
 header {
@@ -261,8 +274,9 @@ footer {
     
 </head>
 <body>
+    <main>
     
-    <div style="position: fixed;right:1%;width:98%;left:1%" class="flex-design" >
+    <div  class="navbar flex-design" >
         
             <div><a  style="color: bisque;" href="#1">Home</a></div>
             <div><a  style="color: bisque;" href="#2">About</a></div>
@@ -370,6 +384,7 @@ footer {
  </address>
 </footer>
 
+</main>
 </body>
 
 </html>

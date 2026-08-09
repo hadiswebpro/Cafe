@@ -6,7 +6,7 @@ This project was created as a practice project while learning the fundamentals o
 
 ## 🌐 Live Demo
 
-[View Live Site](YOUR-LIVE-SITE-LINK)
+[View Live Site](https://hadiswebpro.github.io/Cafe/)
 
 ## ✨ Features
 
