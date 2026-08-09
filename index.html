@@ -15,119 +15,247 @@
 
 
     <style>
-        *{box-sizing: border-box;
+    
+* {
+    box-sizing: border-box;
+}
 
-        }
-        header{ font-size: xx-large;
-            display: flex;
-            height: 480px;
-            justify-content:center;
-            background-image: url("./images/image.jiff");
-            background-size: cover;
-            background-attachment: scroll;
-            color: bisque;
-            
-         }
+html {
+    background-color: blanchedalmond;
+}
 
-        p,article{
-            font-size: 2vw;
-        }
-        .flex-design{
-            display: flex;
-            width: 100%;
-            flex-direction: row;
-        }
+body {
+    margin: 0;
+    background-color: blanchedalmond;
+}
 
-        .flex-design div{
-             flex-direction:row ;
-             background-color: rgb(69, 44, 3);
-             color: bisque;
-             font-size: large;
-             width: 100%;
-             text-align: center;
-             border-style: groove;
-             border-color: rgb(141, 91, 4);
-        }
-        .flex-design > section{
-            font-size: medium;
-            width: 100%;
-            display: flex;
-            
-        }
-        .flex-design>details{
-            font-size: large;
-            color: beige;
-            text-decoration: dotted;
-        }
-        @media screen and (max-width:800px) {
-            section.flex-design{
-                width: 100%;
-                flex-direction: column;
-            }
-        }
-        .head{
-               color: bisque;
-               background-color: rgb(69, 44, 3);
-               border-style: groove;
-               border-color: rgb(141, 91, 4);
-               display: inline-block;
-               
-               
-        }
-        div.designfloat     {
-                              overflow: auto;
-                              width: 100%;
-                            }   
-        div.designfloat div {
-                              float:left;
-                              width: 48%;
-                              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                              font-size: 140%;
-                              text-align: center;
-                              padding: 2px;
 
-                            }
-        summary{
-             font-size: 150px;
-             font-style: initial;
-             color: rgb(131, 102, 9);
-             background-color: rgb(213, 167, 106);
-             border-style: groove;
-             border-color: rgb(141, 91, 4);
-        }
-        .classforp{
-            font-size: 120;
-             font-style: oblique;
-             color: rgb(131, 102, 9);
-        }
-        footer{
-            font-size: small;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-        a:link      {
-                       color:rgb(225, 168, 12);
-                       font-size: 140%;
-                       background-color: transparent;
-                       text-decoration: wavy;
-                    }
-        a:visited   {
-                       color:rgb(12, 211, 225);
-                       font-size: 140%;
-                       background-color: transparent;
-                       text-decoration: wavy;
-                    }     
-        a:hover     {
-                       color:rgb(225, 12, 136);
-                       font-size: 140%;
-                       background-color: transparent;
-                       text-decoration: underline;
-                    } 
-        a:active    {
-                       color:rgb(38, 207, 16);
-                       font-size: 140%;
-                       background-color: transparent;
-                       text-decoration: wavy; 
-                    }
+/* -------------------- NAVIGATION -------------------- */
+
+.flex-design {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.flex-design > div {
+    background-color: rgb(69, 44, 3);
+    color: bisque;
+    font-size: large;
+    width: 100%;
+    text-align: center;
+    border-style: groove;
+    border-color: rgb(141, 91, 4);
+}
+
+
+/* -------------------- HEADER -------------------- */
+
+header {
+    font-size: xx-large;
+    display: flex;
+    height: 480px;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("./images/cafe.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+
+    color: bisque;
+}
+
+header p {
+    align-self: flex-end;
+}
+
+
+/* -------------------- TEXT -------------------- */
+
+p,
+article {
+    font-size: 2vw;
+}
+
+
+/* -------------------- SECTIONS -------------------- */
+
+section.flex-design {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+section.flex-design > article {
+    width: 100%;
+}
+
+section.flex-design > img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+/* -------------------- HEADINGS -------------------- */
+
+.head {
+    color: bisque;
+    background-color: rgb(69, 44, 3);
+    border-style: groove;
+    border-color: rgb(141, 91, 4);
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+
+/* -------------------- MENU -------------------- */
+
+.designfloat {
+    overflow: auto;
+    width: 100%;
+    display: flex;
+    gap: 2%;
+}
+
+.designfloat > div {
+    float: none;
+    width: 48%;
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+
+    font-size: 140%;
+    text-align: center;
+    padding: 2px;
+}
+
+
+/* Menu details */
+
+.designfloat details {
+    width: 100%;
+}
+
+summary {
+    font-size: 1.5rem;
+    font-style: normal;
+    color: rgb(131, 102, 9);
+    background-color: rgb(213, 167, 106);
+    border-style: groove;
+    border-color: rgb(141, 91, 4);
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/* Menu columns */
+
+.designfloat details > div {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/* Menu text */
+
+.designfloat details p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+
+/* -------------------- SPECIAL TEXT -------------------- */
+
+.classforp {
+    font-size: 120%;
+    font-style: oblique;
+    color: rgb(131, 102, 9);
+}
+
+
+/* -------------------- LINKS -------------------- */
+
+a:link {
+    color: rgb(225, 168, 12);
+    font-size: 140%;
+    background-color: transparent;
+    text-decoration: wavy;
+}
+
+a:visited {
+    color: rgb(12, 211, 225);
+    font-size: 140%;
+    background-color: transparent;
+    text-decoration: wavy;
+}
+
+a:hover {
+    color: rgb(225, 12, 136);
+    font-size: 140%;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(38, 207, 16);
+    font-size: 140%;
+    background-color: transparent;
+    text-decoration: wavy;
+}
+
+
+/* -------------------- FOOTER -------------------- */
+
+footer {
+    font-size: small;
+    font-family:
+        Cambria,
+        Cochin,
+        Georgia,
+        Times,
+        'Times New Roman',
+        serif;
+}
+
+
+/* -------------------- MOBILE -------------------- */
+
+@media screen and (max-width: 800px) {
+
+    section.flex-design {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .designfloat {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .designfloat > div {
+        width: 100%;
+    }
+
+    .designfloat details > div {
+        width: 48%;
+    }
+
+    p,
+    article {
+        font-size: 4vw;
+    }
+
+    header {
+        height: 350px;
+    }
+}
+
+
     </style>
 
     
